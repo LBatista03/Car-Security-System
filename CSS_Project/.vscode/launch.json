@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "GDB for Remote Attach",
+      "type": "cppdbg",
+      "request": "launch",
+      "externalConsole": false,
+      "stopAtEntry": true,
+      "program": "${workspaceFolder}/projeto",
+      "MIMode": "gdb",
+      "cwd": "${workspaceFolder}",
+      "miDebuggerPath": "/usr/bin/gdb-multiarch",
+      "miDebuggerServerAddress": "10.42.0.58:1000",
+      "miDebuggerArgs": " -ex 'handle all print nostop noignore'",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/home/luisbatista/Desktop/projeto_novo",
+      "program": "/home/luisbatista/Desktop/projeto_novo/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
